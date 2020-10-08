@@ -7,7 +7,7 @@ public class Ejercicio4 {
 
     public static void main(String[] args) {
         int numero1 = GetNumero("Ingrese un numero");
-        int numero2 = GetNumero(String.format("Ingrese un numero mayor o igual a %", numero1));
+        int numero2 = GetNumeroMayorOIgualQue(String.format("Ingrese un numero mayor o igual a %s", numero1), numero1);
 
         MostrarSecuenciaInclusiva(numero1, numero2);
     }
@@ -44,11 +44,13 @@ public class Ejercicio4 {
     }
 
     private static void MostrarSecuenciaInclusiva(int desde, int hasta){
-        String secuencia = "";
+        String secuencia = "[ " + desde;
 
-        for (int i = desde; i <= hasta; i++) {
-            secuencia = secuencia +" - " + i;
+        for (int i = desde+1; i <= hasta; i++) {
+            secuencia = secuencia + " - " + i;
         }
+
+        secuencia = secuencia + " ]";
 
         System.out.println(String.format("Mostrando secuencia inclusiva desde %s hasta %s", desde, hasta));
         System.out.println(secuencia);

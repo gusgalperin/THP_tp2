@@ -19,7 +19,6 @@ public class Ejercicio6 {
                 promedioMasAlto = promedioActual;
                 nombrePromedioMasAlto = nombreActual;
             }
-
         }
 
         System.out.println(String.format("El mejor promedio es %s con %s", nombrePromedioMasAlto, promedioMasAlto));
